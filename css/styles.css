@@ -1,34 +1,47 @@
 :root {
+    /* animation */
+
+    --time-to-animate: 250ms;
+
+    /* colors */
     --body-background-color: #ffffff;
+    /* headings */
+    --headings-speciality-text-color: #ffffff;
     --headings-text-color-default: #212121;
+    /* borders */
+    --border-regular-customers-icons: #afb1b8;
     --header-border-color: #ececec;
+    --border-item-list-color: #eeeeee;
+    /* text-colors */
     --text-p-color-default: #757575;
     --links-text-color-hover: #2196f3;
+    --buttons-text-color: #ffffff;
+    --links-text-color-default: #212121;
+    --main-title-text-color: #ffffff;
+    --footer-address-text-color: #ffffff;
+    --portfolio-item-desc-text-color: #ffffff;
+    /* backgrounds-color */
     --main-button-background-color-default: #2196f3;
     --button-background-color-default: #f5f4fa;
     --buttons-background-color-hover: #188ce8;
-    --buttons-text-color: #ffffff;
-    --links-text-color-default: #212121;
-    --border-item-list-color: #eeeeee;
     --background-item-list-color: #ffffff;
-    --weblogo-color: #000;
-    --weblogo-footer-color: #ffffff;
-    --weblogo-half-color: #2196f3;
-    --main-title-text-color: #fff;
     --hero-background-color: #2f303a;
     --team-section-background-color: #f5f4fa;
     --benefits-icons-background-color: #f5f4fa;
     --team-card-background-color: #ffffff;
     --footer-background-color: #2f303a;
-    --footer-address-text-color: #ffffff;
-    --footer-contacts-link-color: rgba(255, 255, 255, 0.6);
-    --border-regular-customers-icons: #afb1b8;
     --soc-links-background-hover: #2196f3;
+    --soc-links-footer-background-hover: #2196f3;
+    /* logo */
+    --weblogo-color: #000;
+    --weblogo-footer-color: #ffffff;
+    --weblogo-half-color: #2196f3;
+    /* ------ */
+    --footer-contacts-link-color: rgba(255, 255, 255, 0.6);
     --default-color-soc-lincs-icons: #afb1b8;
     --default-color-clients-icons: #afb1b8;
     --customers-hover-fill-color: #2196f3;
     --icons-social-color-hover: #ffffff;
-    --soc-links-footer-background-hover: #2196f3;
 }
 
 p,
@@ -151,7 +164,7 @@ body {
     position: absolute;
     content: '';
     background-color: currentColor;
-    border: 1px solid #2196f3;
+    border: 1px solid var(--links-text-color-hover);
     border-radius: 2px;
     width: 100%;
     height: 4px;
@@ -168,6 +181,20 @@ body {
 .footer-contacts:focus,
 .active {
     color: var(--links-text-color-hover);
+}
+
+/* ------------animation */
+
+.main-nav-link,
+.main-nav-link,
+.header-contacts,
+.header-contacts,
+.footer-contacts,
+.footer-contacts,
+.active {
+    transition-property: color;
+    transition-duration: var(--time-to-animate);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hdr-cont-icon {
@@ -253,6 +280,14 @@ body {
     background-color: var(--buttons-background-color-hover);
 }
 
+/* animation */
+.order,
+.order {
+    transition-property: background-color;
+    transition-duration: var(--time-to-animate);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 /* benefits */
 
 .benefits {
@@ -298,12 +333,34 @@ body {
     gap: 30px;
 }
 
+.speciality-item {
+    position: relative;
+}
+
 .speciality-image,
 .portfolio-item img,
 .team-card-image {
     display: block;
     max-width: 100%;
     height: auto;
+}
+
+.what-we-do-heding {
+    background-color: rgba(47, 48, 58, 0.8);
+    padding: 27px 82px;
+    width: 100%;
+    display: block;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--headings-speciality-text-color);
 }
 
 /* ----------------------H2 headers-------------------------- */
@@ -389,6 +446,15 @@ body {
     fill: var(--icons-social-color-hover);
 }
 
+/* aniomation  */
+
+.soc-link,
+.soc-link {
+    transition-property: background-color, fill;
+    transition-duration: var(--time-to-animate);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 /* -------------------Regular-customers------------------------ */
 
 .regular-customers {
@@ -422,6 +488,15 @@ body {
 .client-link:focus {
     border: 1px solid var(--customers-hover-fill-color);
     fill: var(--customers-hover-fill-color);
+}
+
+/* animation */
+
+.client-link,
+.client-link {
+    transition-property: border, fill;
+    transition-duration: var(--time-to-animate);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* -------------------Footer---------------------- */
@@ -507,6 +582,15 @@ footer {
     background-color: var(--soc-links-footer-background-hover);
 }
 
+/* animation */
+
+.soc-link-footer,
+.soc-link-footer {
+    transition-property: background-color;
+    transition-duration: var(--time-to-animate);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 /* -------------------Portfolio------------------- */
 
 .visually-hidden {
@@ -550,6 +634,16 @@ footer {
     color: var(--buttons-text-color);
 }
 
+/* animation */
+
+.selected,
+.filters-buttons,
+.filters-buttons {
+    transition-property: background-color, box-shadow, border-radius, border, color;
+    transition-duration: var(--time-to-animate);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .portfolio-headers {
     font-weight: 700;
     font-size: 18px;
@@ -573,6 +667,35 @@ footer {
 .portfolio-link {
     display: block;
     text-decoration: none;
+}
+
+.wrapper-text-on-portf-item {
+    position: relative;
+    overflow: hidden;
+    /* width: 100%;
+    height: 100%; */
+}
+
+.desc-text-on-image-portfolio {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    padding: 63px 24px;
+    background-color: rgba(33, 150, 243, 0.9);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+    color: var(--portfolio-item-desc-text-color);
+    max-height: 100%;
+    transform: translateY(100%);
+    transition-duration: var(--time-to-animate);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-item:hover .desc-text-on-image-portfolio {
+    transform: translateY(0%);
 }
 
 .filter {
@@ -605,4 +728,63 @@ footer {
 .portfolio-link:hover,
 .portfolio-link:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+/* animation */
+
+.portfolio-link,
+.portfolio-link {
+    transition-property: box-shadow;
+    transition-duration: var(--time-to-animate);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* modal-window */
+
+.backdrop {
+    position: fixed;
+    top: 0;
+
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition-property: visibility, opacity;
+    transition: opacity var(--time-to-animate) cubic-bezier(0.4, 0, 0.2, 1), visibility var(--time-to-animate) cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0);
+}
+
+.modal {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 528px;
+    min-height: 581px;
+    background-color: var(--body-background-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform var(--time-to-animate) cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 8px;
+    top: 8px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
 }

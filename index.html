@@ -52,7 +52,7 @@
             <section class="section hero">
                 <div class="container">
                     <h1 class="main-title">Эффективные решения для вашего бизнеса</h1>
-                    <input class="order" type="button" value="Заказать услугу" />
+                    <input class="order" data-modal-open type="button" value="Заказать услугу" />
                 </div>
             </section>
             <!-- Benefits -->
@@ -111,6 +111,7 @@
                                 height="294"
                                 alt="application code development"
                             />
+                            <h3 class="what-we-do-heding">Десктопные приложения</h3>
                         </li>
                         <li class="speciality-item">
                             <img
@@ -120,9 +121,11 @@
                                 height="294"
                                 alt="development of adaptive design for smartphones"
                             />
+                            <h3 class="what-we-do-heding">Мобильные приложения</h3>
                         </li>
                         <li class="speciality-item">
                             <img class="speciality-image" src="./images/whatdowedo3.jpg" width="370" height="294" alt="choice of color palette" />
+                            <h3 class="what-we-do-heding">Дизайнерские решения</h3>
                         </li>
                     </ul>
                 </div>
@@ -385,5 +388,15 @@
                 </div>
             </div>
         </footer>
+        <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+                <button class="modal-close" data-modal-close type="button">
+                    <svg width="20" height="20" class="envelope-icon">
+                        <use href="./images/icons.svg#icon-close-modal"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
     </body>
+    <script src="./js/modal.js"></script>
 </html>
