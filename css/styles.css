@@ -186,10 +186,7 @@ body {
 /* ------------animation */
 
 .main-nav-link,
-.main-nav-link,
 .header-contacts,
-.header-contacts,
-.footer-contacts,
 .footer-contacts,
 .active {
     transition-property: color;
@@ -281,7 +278,7 @@ body {
 }
 
 /* animation */
-.order,
+
 .order {
     transition-property: background-color;
     transition-duration: var(--time-to-animate);
@@ -347,9 +344,12 @@ body {
 
 .what-we-do-heding {
     background-color: rgba(47, 48, 58, 0.8);
-    padding: 27px 82px;
+    /* padding: 27px 82px; */
     width: 100%;
-    display: block;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     bottom: 0;
     left: 0;
@@ -492,7 +492,6 @@ body {
 
 /* animation */
 
-.client-link,
 .client-link {
     transition-property: border, fill;
     transition-duration: var(--time-to-animate);
@@ -584,7 +583,6 @@ footer {
 
 /* animation */
 
-.soc-link-footer,
 .soc-link-footer {
     transition-property: background-color;
     transition-duration: var(--time-to-animate);
@@ -637,9 +635,8 @@ footer {
 /* animation */
 
 .selected,
-.filters-buttons,
 .filters-buttons {
-    transition-property: background-color, box-shadow, border-radius, border, color;
+    transition-property: background-color, box-shadow, color;
     transition-duration: var(--time-to-animate);
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -672,8 +669,6 @@ footer {
 .wrapper-text-on-portf-item {
     position: relative;
     overflow: hidden;
-    /* width: 100%;
-    height: 100%; */
 }
 
 .desc-text-on-image-portfolio {
@@ -694,7 +689,8 @@ footer {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-item:hover .desc-text-on-image-portfolio {
+.portfolio-item:hover .desc-text-on-image-portfolio,
+.portfolio-link:focus .desc-text-on-image-portfolio {
     transform: translateY(0%);
 }
 
@@ -732,7 +728,6 @@ footer {
 
 /* animation */
 
-.portfolio-link,
 .portfolio-link {
     transition-property: box-shadow;
     transition-duration: var(--time-to-animate);
